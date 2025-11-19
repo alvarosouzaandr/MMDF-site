@@ -80,7 +80,7 @@ body {
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, rgba(10, 14, 39, 0.95), rgba(255, 140, 0, 0.15)),
-                url('/banner.jpg') center/cover;
+                url('banner.jpg') center/cover;
     color: white;
     padding: 140px 20px 120px;
     text-align: center;
