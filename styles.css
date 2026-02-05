@@ -80,7 +80,7 @@ body {
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, rgba(10, 14, 39, 0.95), rgba(255, 140, 0, 0.15)),
-                url('banner.jpg') center/cover;
+                url('//img/banner.jpg') center/cover;
     color: white;
     padding: 140px 20px 120px;
     text-align: center;
@@ -524,6 +524,185 @@ section h2 {
     color: #999;
 }
 
+/* ========================================
+   PÁGINAS DE SERVIÇO (Service Pages)
+   ======================================== */
+
+/* Hero interno (breadcrumb) */
+.hero-inner {
+    padding: 80px 20px 60px;
+    background: linear-gradient(135deg, #0a0e27 0%, #1a2550 100%);
+}
+
+.breadcrumb {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.breadcrumb a {
+    color: #FF8C00;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: #FFA500;
+    text-decoration: underline;
+}
+
+/* Layout da página de serviço */
+.service-detail {
+    background-color: #ffffff;
+    padding: 80px 20px;
+}
+
+.service-detail-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: start;
+    margin-bottom: 60px;
+}
+
+/* Container da imagem */
+.service-detail-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Imagem padronizada */
+.service-detail-image img,
+.service-image {
+    width: 100%;
+    max-width: 480px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-detail-image img:hover,
+.service-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 40px rgba(255, 140, 0, 0.2);
+}
+
+/* Conteúdo textual */
+.service-detail-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #0a0e27;
+    text-align: left;
+}
+
+.service-detail-content h3 {
+    font-size: 24px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    color: #0a0e27;
+    font-weight: 600;
+}
+
+.service-detail-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.service-detail-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+.service-detail-list li {
+    padding-left: 30px;
+    margin-bottom: 12px;
+    position: relative;
+    color: #333;
+    line-height: 1.7;
+}
+
+.service-detail-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #FF8C00;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Call-to-Action (CTA) */
+.service-cta {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 50px 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    margin-top: 60px;
+}
+
+.service-cta h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #0a0e27;
+}
+
+.service-cta p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.service-cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-service {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Responsive - Páginas de Serviço */
+@media (max-width: 768px) {
+    .service-detail-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .service-detail-image img,
+    .service-image {
+        max-width: 100%;
+        height: 260px;
+    }
+
+    .service-detail-content h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .service-detail-content h3 {
+        font-size: 22px;
+    }
+
+    .service-cta h2 {
+        font-size: 26px;
+    }
+
+    .service-cta-buttons {
+        flex-direction: column;
+    }
+}
+
+/* ======================================== */
+
 /* Responsive */
 @media (max-width: 768px) {
     .hero h1 {
@@ -543,7 +722,7 @@ section h2 {
     section h2 {
         font-size: 32px;
     }
-    
+
     .main-nav {
         position: fixed;
         top: 110px;
@@ -555,16 +734,16 @@ section h2 {
         padding: 40px 30px;
         box-shadow: -2px 0 20px rgba(0,0,0,0.3);
     }
-    
+
     .main-nav.active {
         right: 0;
     }
-    
+
     .main-nav ul {
         flex-direction: column;
         gap: 25px;
     }
-    
+
     .main-nav a {
         font-size: 18px;
     }
